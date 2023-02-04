@@ -9,7 +9,7 @@ dataSources:
       # use address of LensHubProxy for indexing - includes all transactions
       # address: "0xDb46d1Dc155634FbC732f92E853b10B288AD5a1d"
       abi: ERC20
-      startBlock: 0
+      startBlock: 56374230
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
