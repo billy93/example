@@ -1,0 +1,29 @@
+{
+  "name": "hello-world",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "createProd": "graph create --node http://64.176.34.253:8020 helloworld",
+    "deployProd": "graph deploy --node http://64.176.34.253:8020 helloworld",
+    "removeProd": "graph remove --node http://64.176.34.253:8020 helloworld",
+
+    "createEth": "graph create --node http://64.176.34.253:8020 helloworldeth",
+    "deployEth": "graph deploy --node http://64.176.34.253:8020 helloworldeth",
+    "removeEth": "graph remove --node http://64.176.34.253:8020 helloworldeth",
+    
+
+    "create-local": "graph create --node http://localhost:8020/ andriishupta/hello-world",
+    "remove-local": "graph remove --node http://localhost:8020/ andriishupta/hello-world",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 andriishupta/hello-world",
+    "test": "graph test"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.33.0",
+    "@graphprotocol/graph-ts": "0.27.0"
+  },
+  "devDependencies": {
+    "hardhat": "^2.10.1",
+    "matchstick-as": "0.5.0"
+  }
+}

@@ -1,0 +1,22 @@
+type Profile @entity {
+  id: ID!
+  handle: String
+  imageURI: String
+
+  # derived from connection
+  posts: [Post!] @derivedFrom(field: "profile")
+}
+
+type Post @entity {
+  id: ID!
+  contentURI: String
+
+  # one to many connection
+  profile: Profile!
+}
+
+type Test @entity{
+  id: ID!
+  address: String
+  balance: String
+}
