@@ -8,9 +8,7 @@ import {
 import { Address, BigDecimal, BigInt } from '@graphprotocol/graph-ts'
 
 export function handleTransfer(event: Transfer): void {
-  log.info('Event [Transfer] FROM : {} TO : {} Value: {} Tx: {}', [
-    event.params.from.toHexString(),
-    event.params.to.toHexString(),
+  log.info('Event [Transfer] has been trigger Value: {} Tx: {}', [
     event.params.value.toString(),
     event.transaction.hash.toHex()]);
 }
