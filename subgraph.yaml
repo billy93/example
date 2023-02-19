@@ -2,23 +2,22 @@ specVersion: 0.0.4
 schema:
   file: ./schema.graphql
 dataSources:
-  - kind: ethereum
+  - kind: ethereum/contract
     name: LensHub
     network: xdc
     source:
-      # use address of LensHubProxy for indexing - includes all transactions
-      # address: "0xDb46d1Dc155634FbC732f92E853b10B288AD5a1d"
-      abi: ERC20
-      startBlock: 56374230
+      abi: Ethereum
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - Test
+        - Account
       abis:
         - name: ERC20
           file: ./abis/ERC20.json
+        - name: Ethereum
+          file: ./abis/ethereum.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
